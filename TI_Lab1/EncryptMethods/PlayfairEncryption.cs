@@ -31,7 +31,7 @@ namespace TI_Lab1.EncryptMethods
             plaintext = Encryption.ClearText(plaintext, "En");
             plaintext = plaintext.ToUpper();
             string resultStr = "";
-            string nullSymbol = "Xек";
+            string nullSymbol = "X";
             int i = 0;
             int j = 0;
             bool isConcat = false;
