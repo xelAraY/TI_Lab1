@@ -24,7 +24,7 @@
                     <ComboBoxItem>Метод Виженера(Ru)(самогенерирующийся ключ)</ComboBoxItem>
                     <ComboBoxItem>Метод Плейфера(En)</ComboBoxItem>
                 </ComboBox>
-                <TextBox x:Name="Key_TextBox" Text="Введите значение ключа" Margin="5"/>
+                <TextBox x:Name="Key_TextBox" Text="Значение ключа" Margin="5"/>
                 <Button x:Name="Encrypt_Button" Margin="5" Click="Button_Click" Tag="Encode">Зашифровать</Button>
                 <Button x:Name="Decrypt_Button" Margin="5" Click="Button_Click" Tag="Decode">Расшифровать</Button>
                 <Button x:Name="FileEncrypt_Button" Margin="5" Click="FileButton_Click" Tag="Encode">Зашифровать файл</Button>
@@ -33,11 +33,11 @@
         </materialDesign:Card>
 
         <materialDesign:Card Grid.Row="0" Grid.Column="1" Margin="5" Background="White">
-            <TextBox x:Name="Encrypt_TextBox" Margin="5"/>   
+            <TextBox x:Name="Encrypt_TextBox" Margin="5" Text="Исходный текст"/>   
         </materialDesign:Card>
 
         <materialDesign:Card Grid.Row="1" Grid.Column="1" Margin="5" Background="White">
-            <TextBox x:Name="Decrypt_TextBox" Margin="5"/>
+            <TextBox x:Name="Decrypt_TextBox" Margin="5" Text="Результирующий текст"/>
         </materialDesign:Card>
     </Grid>
 </Window>
