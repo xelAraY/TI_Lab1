@@ -74,6 +74,25 @@ namespace TI_Lab1
 
             if (MethodCombo.Text == "Метод Плейфера(En)")
             {
+                string text = Encrypt_TextBox.Text;
+                text = text.ToUpper();
+                text = Encryption.ClearText(text, "En");
+
+                if ((text[text.Length-1] == 'X') && (text.Length % 2 != 0))
+                {
+                    MessageBox.Show("Ошибка в исходном тексте!");
+                    return;
+                }
+                
+                for (int i = 1; i < text.Length; i += 2)
+                {
+                    if (text[i] == 'X' && text[i-1] == 'X')
+                    {
+                        MessageBox.Show("Ошибка в исходном тексте. Две буквы X подряд");
+                        return;
+                    }
+                }
+        
                 if (btn.Tag.ToString() == "Encode")
                     Decrypt_TextBox.Text = PlayfairEncryption.Encrypt(Encrypt_TextBox.Text);
                 else
